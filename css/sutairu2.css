@@ -1,4 +1,5 @@
 /*すべてのページ*/
+body{font-family: 'Meiryo';}
 /*すべてのヘッダー*/
 .exceptheader{box-sizing: border-box;}
 .johnny{text-align: center;
