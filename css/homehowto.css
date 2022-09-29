@@ -13,23 +13,29 @@ body{font-family: 'Meiryo';
 .daniel{text-align: center;}
 /*すべてのメイン*/
 .exceptheader{
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     max-width: 1000px;
     max-height: 1000px;
     position: relative;
+    background-color: blueviolet;
+    width: 100%;
+    height: 100%;
     
    }
-textarea{text-align: center;}  
+
+
+    
+
     input[type="submit"]{
         border: none;
-        padding: 20px;
-        width: 200px;
+        padding: 15px;
+        width: 150px;
         background-color:  rgb(130, 183, 244);
         color: antiquewhite;
         font-size: 1rem;
-        position: absolute;
-        top: 30px;
-        right: 30px;
+        position: relative;
+       
+        left: 85%;
     
         
         
@@ -47,7 +53,7 @@ textarea{text-align: center;}
         background-color:  rgb(130, 183, 244);
         color: antiquewhite;
         font-size: 1rem;
-        position: absolute;
+       
         top: 140px;
         right: 90px;
         padding-top: 4px;
@@ -55,20 +61,27 @@ textarea{text-align: center;}
         text-align: center;}
 
 
-textarea{padding: 6px;width: 70%;
-        height: 400px;
+textarea{
+        padding: 6px;
+        width: 70%;
+        height: 700px;
         font-size: 1rem;
-        position:absolute;
-        top:70px;}
+        
+       
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
 /*その他*/
 .kusai{text-align: center;
-    position:absolute;
+   
     top: 650px;
 }
 .discription{
 
 text-align: center;
-position:absolute;
+
 top: 690px;
 
 }
