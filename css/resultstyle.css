@@ -55,15 +55,17 @@ body{
     float:left;
     border-radius: 50%; 
     width: 35px;
-    height:39px;
+    height:35px;
+    margin-top:5px;
 }
 .sub p{
-    font-size:17px;
+    font-size:16px;
     float:left;
     padding-left:20px;
+    margin-bottom:5px;
 }
 
 .subopinion{
-    font-size: 20px;
+    font-size: 15px;
     clear: left;
 }
