@@ -34,7 +34,8 @@ body{
     width:35px;
     border-radius: 50%;
     background-color: rgb(173, 222, 222);
-    border-style: solid;
+    /*border-style: solid;*/
+    margin-top:5px;
 }
 .mainopinion{
     font-size: 20px;
