@@ -22,17 +22,17 @@
             
             <p>
                 <div class="chickeet">
-                    <input type="submit" value="ちきーと">
+                    <input type="submit" onclick="location.href='./result'" value="ちきーと">
                 </div>
                 <div class="txt">
-                    <textarea name="txt"></textarea>
+                    <textarea name="chickeet_content"></textarea>
                 </div>
             </p>
             
         </main>
         
             <div class="kusai">
-                <nav><a href="howto.html">遊び方</a></nav>
+                <nav><a href="{{url_for('howto')}}">遊び方</a></nav>
             </div>
 
 
