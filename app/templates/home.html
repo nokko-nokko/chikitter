@@ -14,12 +14,14 @@
        <div class="exceptheader">
             <main>
             <p>
+                <form action="/result" method="post">
                 <div class="chickeet">
-                    <input type="submit" onclick="location.href='./result'" value="ちきーと">
+                    <input type="submit" onclick="url_for(result)" value="ちきーと">
                 </div>
                 <div class="txt">
-                    <textarea name="chickeet_content"></textarea>
+                    <textarea name="chickeet_content" required></textarea>
                 </div>
+                </form>
             </p>
             
             </main>
