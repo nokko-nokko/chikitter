@@ -4,27 +4,25 @@
         <meta charset="UTF-8">
         <title>ちきったー主張入力</title>
 
-        <link rel="stylesheet" href="../static/css/homehowto.css" class="nyuryoku">
->>>>>>> 624a3f510f7ebd78330e0789bf3c72da5a9c7c22
+
+        <link rel="stylesheet" href="../static/css/homehowto.css">
     </head>
     <body>
        <header>
         <div class="johnny"><h1>ちきったー</h1></div>
-<<<<<<< HEAD
-=======
            
->>>>>>> 624a3f510f7ebd78330e0789bf3c72da5a9c7c22
         </header>
        <div class="exceptheader">
-        <main>
-            
+            <main>
             <p>
+                <form action="/result" method="post">
                 <div class="chickeet">
-                    <input type="submit" value="ちきーと">
+                    <input type="submit" onclick="url_for(result)" value="ちきーと">
                 </div>
                 <div class="txt">
-                    <textarea name="txt"></textarea>
+                    <textarea name="chickeet_content" required></textarea>
                 </div>
+                </form>
             </p>
             
         </main>
@@ -39,7 +37,7 @@
          </div>
 
             <div class="kusai">
-                <nav><a href="howto.html">遊び方</a></nav>
+                <nav><a href="/howto">遊び方</a></nav>
             </div>
 
        
