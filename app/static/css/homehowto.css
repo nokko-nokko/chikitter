@@ -88,6 +88,7 @@ font-size:20px;
 #popup {
     position:relative;
     top:50px;
+    left:100px;
     text-align: center;
     font-weight: bold;
     display: block;
