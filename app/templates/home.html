@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>ちきったー主張入力</title>
 
+
         <link rel="stylesheet" href="../static/css/homehowto.css">
     </head>
     <body>
@@ -14,24 +15,47 @@
        <div class="exceptheader">
             <main>
             <p>
+                <form action="/result" method="post">
                 <div class="chickeet">
-                    <input type="submit" onclick="location.href='./result'" value="ちきーと">
+                    <input type="submit" onclick="url_for(result)" value="ちきーと">
                 </div>
                 <div class="txt">
-                    <textarea name="chickeet_content"></textarea>
+                    <textarea name="chickeet_content" required></textarea>
                 </div>
+                </form>
             </p>
             
-            </main>
-        
+        </main>
+         <div id="popup">遊び方</div>
+         <div id="popWin">
+           <div class="pop-win">
+            <img src="../static/img/スクリーンショット (5).png" alt="遊び方" width="400" height="500">   
+            <img src="../static/img/スクリーンショット (4).png" alt="遊び方" width="400" height="500">
+               
+               <div id="close">閉じる</div>
+           </div>
+         </div>
+
             <div class="kusai">
                 <nav><a href="howto.html">遊び方</a></nav>
             </div>
-       </div>
-
 
        
-        
+            
+       </div>
+       
+       
         
     </body>
+    <script>
+        const popup = document.getElementById('popup');
+const close = document.getElementById('close');
+const popWin = document.getElementById('popWin');
+popup.addEventListener('click', () => {
+    popWin.style.display = 'flex';
+});
+close.addEventListener('click', () => {
+    popWin.style.display = 'none';
+});
+    </script>
 </html>
