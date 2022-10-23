@@ -87,7 +87,7 @@ font-size:20px;
 
 #popup {
     position:relative;
-    top:50px;
+    top:20px;
     left:100px;
     text-align: center;
     font-weight: bold;
@@ -110,6 +110,7 @@ font-size:20px;
       justify-content: center;
       align-items: center;
       background-color: rgba(0,0,0,.5);
+      text-align: center;
   }
   .pop-win {
       width: 70vw;
@@ -124,3 +125,37 @@ font-size:20px;
       cursor: pointer;
   }
 
+.popimg{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.main{
+    margin-right:auto;
+    margin-left:auto;
+    margin-bottom:20px;
+    border-radius: 2%;
+    padding-left:30px;
+    padding-bottom:40px;
+    box-shadow:5px 5px 10px rgba(0,0,0,0.5);
+    width:500px;
+    height: auto;
+}
+
+.main p{
+    float:left;
+    padding-left:20px;
+}
+
+.mainicon{
+    float: left;
+    width:35px;
+    border-radius: 50%;
+    background-color: rgb(173, 222, 222);
+    /*border-style: solid;*/
+    margin-top:5px;
+}
+.mainopinion{
+    font-size: 20px;
+    clear:left;
+}
