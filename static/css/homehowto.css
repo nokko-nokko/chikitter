@@ -1,27 +1,41 @@
 /*すべてのページ*/
-body{font-family: 'Meiryo';}
+body{font-family: 'Meiryo';
+    margin: 0 0 0 0;}
 /*すべてのヘッダー*/
-.exceptheader{box-sizing: border-box;}
+*{box-sizing: border-box;}
 .johnny{text-align: center;
     color:white;
-    
+    margin-top: 0;
+
     background-color:  rgb(130, 183, 244);
     padding:20px;}
 
 .daniel{text-align: center;}
 /*すべてのメイン*/
+.exceptheader{
+    margin: 0 auto;
+    max-width: 1000px;
+    max-height: 1000px;
+    position: relative;
+    background-color: blueviolet;
+    width: 100%;
+    height: 100%;
+    
+   }
 
-    .txt{text-align: center;}
+
+    
+
     input[type="submit"]{
         border: none;
-        padding: 20px;
-        width: 200px;
+        padding: 15px;
+        width: 150px;
         background-color:  rgb(130, 183, 244);
         color: antiquewhite;
         font-size: 1rem;
-        position: absolute;
-        top: 140px;
-        right: 90px;
+        position: relative;
+       
+        left: 85%;
     
         
         
@@ -34,35 +48,42 @@ body{font-family: 'Meiryo';}
         background-color: aquamarine;
     }
     .fake{border: none;
-        padding: 20px;
+        padding: 0 0 0 0;
         width: 200px;
         background-color:  rgb(130, 183, 244);
         color: antiquewhite;
         font-size: 1rem;
-        position: absolute;
+       
         top: 140px;
         right: 90px;
-    }
-.exceptheader{margin: 0 auto 0 auto;
-    max-width: 1000px;
-    max-height: 1000px;}
-
-textarea{padding: 6px;
-width: 70%;
-height: 400px;
-font-size: 1rem;
-position:relative;
-top:70px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        text-align: center;}
 
 
-}
+textarea{
+        padding: 6px;
+        width: 70%;
+        height: 700px;
+        font-size: 1rem;
+        
+       
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
 /*その他*/
 .kusai{text-align: center;
-    position:absolute;
+   
     top: 650px;
 }
-.discription{text-align: center;
-position:absolute;
-top:590px}
+.discription{
+
+text-align: center;
+
+top: 690px;
+
+}
 
 
