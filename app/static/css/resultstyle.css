@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+*{box-sizing: border-box;}
 body{
    font-family: 'Meiryo';
     font-size: 15px;
@@ -14,14 +14,15 @@ body{
 }
 
 .main{
-    margin-right:auto;
-    margin-left:auto;
+    margin:0 auto;
+    /*margin-right:auto;
+    margin-left:auto;*/
     margin-bottom:20px;
     border-radius: 2%;
     padding-left:30px;
     padding-bottom:40px;
     box-shadow:5px 5px 10px rgba(0,0,0,0.5);
-    width:500px;
+    width:50%;
     height: auto;
 }
 
@@ -70,4 +71,35 @@ body{
 .subopinion{
     font-size: 15px;
     clear: left;
+}
+
+.backbutton-back{
+    display: block;
+    width:300px;
+    height:100px;
+    margin: auto;
+    /*background-color: blue;*/
+    position:relative;
+}
+
+.backbutton{
+    display:block;
+    position:absolute;
+    width: 140px;
+    height:70px;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    background-color: aqua;
+    font-size:25px;
+}
+.backbutton:hover{background-color:rgb(7, 2, 168);}
+.backbutton:active{background-color: aquamarine;}
+
+@media screen and (max-width:850px) {
+    .backbutton{
+        background-color:red;
+    }
+
 }

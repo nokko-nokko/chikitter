@@ -1,14 +1,15 @@
+*{box-sizing: border-box;}
 /*すべてのページ*/
 body{font-family: 'Meiryo';
     margin: 0 0 0 0;}
 /*すべてのヘッダー*/
-*{box-sizing: border-box;}
+/*ヘッダー、クラス名いずれjohnnyはskyblueheader*に変更/
 .johnny{text-align: center;
     color:white;
     margin-top: 0;
-
     background-color:  rgb(130, 183, 244);
     padding:20px;}
+    
 
 .daniel{text-align: center;}
 /*すべてのメイン*/
@@ -17,7 +18,7 @@ body{font-family: 'Meiryo';
     max-width: 1000px;
     max-height: 1000px;
     position: relative;
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
     width: 100%;
     height: 100%;
     
@@ -64,7 +65,7 @@ body{font-family: 'Meiryo';
 textarea{
         padding: 6px;
         width: 70%;
-        height: 700px;
+        height: 310px;
         font-size: 1rem;
         
        
@@ -87,8 +88,8 @@ font-size:20px;
 
 #popup {
     position:relative;
-    top:20px;
-    left:100px;
+    top:0px;
+    
     text-align: center;
     font-weight: bold;
     display: block;
@@ -113,7 +114,7 @@ font-size:20px;
       text-align: center;
   }
   .pop-win {
-      width: 70vw;
+      width: 50vw;
       height: 90vh;
       background-color: #fff;
   }
@@ -124,7 +125,10 @@ font-size:20px;
       right: 20px;
       cursor: pointer;
   }
-
+  #close:hover{color: rgb(130, 183, 244);}
+ 
+  #popup:hover{background-color:rgb(7, 2, 168);}
+  #popup:active{background-color: aquamarine;}
 .popimg{
     margin-right: auto;
     margin-left: auto;
@@ -158,4 +162,6 @@ font-size:20px;
 .mainopinion{
     font-size: 20px;
     clear:left;
+    margin-right:auto;
+    text-align: left;
 }
