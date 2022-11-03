@@ -1,8 +1,9 @@
+*{box-sizing: border-box;}
 /*すべてのページ*/
 body{font-family: 'Meiryo';
     margin: 0 0 0 0;}
 /*すべてのヘッダー*/
-*{box-sizing: border-box;}
+/*ヘッダー、クラス名いずれskyblueheader*/
 .johnny{text-align: center;
     color:white;
     margin-top: 0;
