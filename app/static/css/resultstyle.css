@@ -14,14 +14,15 @@ body{
 }
 
 .main{
-    margin-right:auto;
-    margin-left:auto;
+    margin:0 auto;
+    /*margin-right:auto;
+    margin-left:auto;*/
     margin-bottom:20px;
     border-radius: 2%;
     padding-left:30px;
     padding-bottom:40px;
     box-shadow:5px 5px 10px rgba(0,0,0,0.5);
-    width:500px;
+    width:50%;
     height: auto;
 }
 
