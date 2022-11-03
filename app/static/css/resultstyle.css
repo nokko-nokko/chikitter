@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+*{box-sizing: brder-box;}
 body{
    font-family: 'Meiryo';
     font-size: 15px;
@@ -70,4 +70,26 @@ body{
 .subopinion{
     font-size: 15px;
     clear: left;
+}
+
+.backbutton-back{
+    display: block;
+    width:300px;
+    height:100px;
+    margin: auto;
+    /*background-color: blue;*/
+    position:relative;
+}
+
+.backbutton{
+    display:block;
+    position:absolute;
+    width: 140px;
+    height:70px;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    background-color: aqua;
+    font-size:25px;
 }
