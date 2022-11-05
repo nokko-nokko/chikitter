@@ -1,5 +1,6 @@
 @charset "UTF-8";
 *{box-sizing: border-box;}
+/*PC用のcss*/
 body{
    font-family: 'Meiryo';
     font-size: 15px;
@@ -11,6 +12,7 @@ body{
     background-color: rgb(130, 183, 244);
     color:rgb(254, 255, 255) ;
     padding:20px;
+    width:100%;
 }
 
 .main{
@@ -49,7 +51,7 @@ body{
     margin-bottom:10px;
     border-radius: 2%;
     box-shadow:5px 5px 10px rgba(0,0,0,0.5);
-    width:400px;
+    width:40%;
     height:100px;
     padding-left:15px;
 }
@@ -96,10 +98,85 @@ body{
 }
 .backbutton:hover{background-color:rgb(7, 2, 168);}
 .backbutton:active{background-color: aquamarine;}
-
-@media screen and (max-width:850px) {
+/*タブレット用のcss*/
+@media screen and (max-width:960px) and (min-width:520px) {
+    
+    .main{
+        margin:0 auto;
+        /*margin-right:auto;
+        margin-left:auto;*/
+        margin-bottom:20px;
+        border-radius: 2%;
+        padding-left:30px;
+        padding-bottom:40px;
+        box-shadow:5px 5px 10px rgba(0,0,0,0.5);
+        width:70%;
+        height: auto;
+    }
+    
+    .sub{
+        margin-right:auto;
+        margin-left:auto;
+        margin-bottom:10px;
+        border-radius: 2%;
+        box-shadow:5px 5px 10px rgba(0,0,0,0.5);
+        width:60%;
+        height:100px;
+        padding-left:15px;
+    }
+    
+        
     .backbutton{
         background-color:red;
     }
+
+}
+
+/*スマホ用のcss*/
+@media screen and (max-width:520px) {
+
+    .main{
+        margin:0 auto;
+        /*margin-right:auto;
+        margin-left:auto;*/
+        margin-bottom:20px;
+        border-radius: 2%;
+        padding-left:30px;
+        padding-bottom:40px;
+        box-shadow:5px 5px 10px rgba(0,0,0,0.5);
+        width:80%;
+        height: auto;
+    }
+
+    .mainopinion{
+        font-size: 18px;
+        clear:left;
+    }
+    .sub{
+        margin-right:auto;
+        margin-left:auto;
+        margin-bottom:10px;
+        border-radius: 2%;
+        box-shadow:5px 5px 10px rgba(0,0,0,0.5);
+        width:70%;
+        height:100px;
+        padding-left:15px;
+    }
+    
+    .sub p{
+        font-size:14px;
+        float:left;
+        padding-left:20px;
+        margin-bottom:5px;
+    }
+    
+    .subopinion{
+        font-size: 13px;
+        clear: left;
+    }
+    .backbutton{
+        background-color:yellow;
+    }
+
 
 }
