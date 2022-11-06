@@ -3,8 +3,8 @@
 body{font-family: 'Meiryo';
     margin: 0 0 0 0;}
 /*すべてのヘッダー*/
-/*ヘッダー、クラス名いずれjohnnyはskyblueheader*に変更/
-.johnny{text-align: center;
+/*ヘッダー、クラス名いずれjohnnyはskyblueheaderに変更*/
+.skyblueheader{text-align: center;
     color:white;
     margin-top: 0;
     background-color:  rgb(130, 183, 244);
