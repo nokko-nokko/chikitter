@@ -4,11 +4,12 @@ body{font-family: 'Meiryo';
     margin: 0 0 0 0;}
 /*すべてのヘッダー*/
 /*ヘッダー、クラス名いずれjohnnyはskyblueheaderに変更*/
-.johnny{text-align: center;
+.skyblueheader{text-align: center;
     color:white;
     margin-top: 0;
     background-color:  rgb(130, 183, 244);
-    padding:20px;}
+    padding:20px;
+    width:100%;}
     
 
 .daniel{text-align: center;}
@@ -164,4 +165,8 @@ font-size:20px;
     clear:left;
     margin-right:auto;
     text-align: left;
+}
+/*mobile用のcss*/
+@media screen and (max-width:767px) {
+
 }
