@@ -31,7 +31,13 @@ def result():
         # all_positivelist_randomのすべての要素をpositivelistに要素として追加
         for i in range(6):
             positivelist.append(all_positivelist_random[i])
-        return render_template('result.html',chickeet=chickeet,positivelist=positivelist)
+        # 以下、アカウント名のランダム表示処理
+        all_namelist = ['丹羽トリオ', 'チキンマン', 'しゃも山', '卵産みました!（7/31）','一ヶ月であなたも鷹になれる','チキ田']
+        namelist = []
+        all_namelist_random = random.sample(all_namelist, 6)
+        for i in range(6):
+            namelist.append(all_namelist_random[i])
+        return render_template('result.html',chickeet=chickeet,positivelist=positivelist,namelist=namelist)
     else:
         chickeet = "おにぎりは鮭しか勝たん"
         positivelist = ["やるやん","僕もそう思います","おにぎり最高！","時代は鮭","まじで同感","おいしいよね"]
