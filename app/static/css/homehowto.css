@@ -1,7 +1,10 @@
 *{box-sizing: border-box;}
 /*すべてのページ*/
 body{font-family: 'Meiryo';
-    margin: 0 0 0 0;}
+    margin: 0 0 0 0;
+    background-image:url(../img/背景.png) ;
+    background-size:cover;
+}
 /*すべてのヘッダー*/
 /*ヘッダー、クラス名いずれjohnnyはskyblueheaderに変更*/
 .skyblueheader{text-align: center;
@@ -90,7 +93,6 @@ font-size:20px;
 #popup {
     position:relative;
     top:0px;
-    
     text-align: center;
     font-weight: bold;
     display: block;
@@ -115,6 +117,8 @@ font-size:20px;
       text-align: center;
   }
   .pop-win {
+    background-image:url(../img/背景.png) ;
+    background-size:cover;
       width: 50vw;
       height: 90vh;
       background-color: #fff;
@@ -136,6 +140,7 @@ font-size:20px;
 }
 
 .main{
+    background-color: #fff;
     margin-right:auto;
     margin-left:auto;
     margin-bottom:20px;
