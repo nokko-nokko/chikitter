@@ -93,7 +93,7 @@ body{
     left: 50%;
     transform:translate(-50%,-50%);
     color:white;
-    background-color: aqua;
+    background-color:  rgb(130, 183, 244);
     font-size:25px;
 }
 .backbutton:hover{background-color:rgb(7, 2, 168);}
@@ -126,9 +126,9 @@ body{
     }
     
         
-    .backbutton{
+    /*.backbutton{
         background-color:red;
-    }
+    }*/
 
 }
 
@@ -174,9 +174,9 @@ body{
         font-size: 13px;
         clear: left;
     }
-    .backbutton{
+   /* .backbutton{
         background-color:yellow;
-    }
+    }*/
 
 
 }
