@@ -4,7 +4,7 @@
 body{
    font-family: 'Meiryo';
     font-size: 15px;
-    background-image:url(../img/背景.png) ;
+    background-image:url(../img/スマホ背景.png) ;
     background-size:cover;
  }
 
@@ -162,7 +162,7 @@ body{
         margin-bottom:10px;
         border-radius: 2%;
         box-shadow:5px 5px 10px rgba(0,0,0,0.5);
-        width:70%;
+        width:300px;
         height:100px;
         padding-left:15px;
     }
