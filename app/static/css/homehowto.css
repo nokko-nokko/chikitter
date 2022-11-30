@@ -220,7 +220,7 @@ textarea{
 @media screen and (max-width:960px) and (min-width:580px) {
     .skyblueheader{
         text-align: center;
-        color:rgb(0, 0, 0);
+        color:rgb(255, 255, 255);
         margin-top: 0;
         background-color:  rgb(130, 183, 244);
         padding:6%;
