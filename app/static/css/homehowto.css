@@ -292,7 +292,7 @@ textarea{
         }
         .pop-win {
             background-image:url(../img/スマホ背景.png) ;
-            /*background-repeat: no-repeat;*/
+            background-repeat: no-repeat;
             background-size:cover;
               width: 120vw;
               height: 90vh;
@@ -399,7 +399,7 @@ textarea{
 }
 .pop-win {
     background-image:url(../img/スマホ背景.png) ;
-    /*background-repeat: no-repeat;*/
+    background-repeat: no-repeat;
     background-size:cover;
       width: 100vw;
       height: 90vh;
