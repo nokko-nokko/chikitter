@@ -292,7 +292,7 @@ textarea{
         }
         .pop-win {
             background-image:url(../img/スマホ背景.png) ;
-            background-repeat: no-repeat;
+            background-repeat: repeat;
             background-size:cover;
               width: 120vw;
               height: 90vh;
@@ -332,7 +332,7 @@ textarea{
         font-family: 'Meiryo';
         /*margin: 0 0 0 0;*/
         background-image:url(../img/スマホ背景.png) ;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         /*background-size:cover;*/
         /*max-height: 2000px;
         max-width: 4000px;*/
