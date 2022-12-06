@@ -1,9 +1,14 @@
 import random
 from flask import Flask, render_template, request
-from models.models import PositiveContent
+
+#移動
+app = Flask(__name__)
+
+from app.models import db
+from app.models import PositiveContent
 import MeCab
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
 @app.route('/')
 def home():
