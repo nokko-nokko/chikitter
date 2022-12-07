@@ -4,6 +4,7 @@ from flask import Flask, render_template, request
 #移動
 app = Flask(__name__)
 
+#追加
 from app.models import db
 from app.models import PositiveContent
 import MeCab
