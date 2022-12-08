@@ -1,6 +1,7 @@
 import random
 from flask import Flask, render_template, request
 from models.models import PositiveContent
+import MeCab
 
 app = Flask(__name__)
 
@@ -31,17 +32,26 @@ def result():
         # all_positivelist_randomのすべての要素をpositivelistに要素として追加
         for i in range(6):
             positivelist.append(all_positivelist_random[i])
+        
+        newpositivelist = []
+        noun = ""
+        for positive in positivelist:
+            mecab = MeCab.Tagger("-d /usr/local/lib/mecab/dic/ipadic -Ochasen")
+            nouns = [line.split()[0] for line in mecab.parse(chickeet).splitlines() if "固有名詞" in line.split()[-1]]
+            if len(nouns) == 0:
+                newpositivelist = ["こんなにすごいと銅像建っちゃうよ","さすが👏","わかりみが深い","めちゃくちゃわかる","それなすぎて草","たしかに🦀"]
+            else:
+                noun = random.choice(nouns)
+                newpositivelist.append(positive.replace('○○',noun))
+        
         # 以下、アカウント名のランダム表示処理
         all_namelist = ['丹羽トリオ', 'チキンマン', 'しゃも山', '卵産みました!（7/31）','一ヶ月であなたも鷹になれる','チキ田']
         namelist = []
         all_namelist_random = random.sample(all_namelist, 6)
+
         for i in range(6):
             namelist.append(all_namelist_random[i])
-        return render_template('result.html',chickeet=chickeet,positivelist=positivelist,namelist=namelist)
-    else:
-        chickeet = "おにぎりは鮭しか勝たん"
-        positivelist = ["やるやん","僕もそう思います","おにぎり最高！","時代は鮭","まじで同感","おいしいよね"]
-        return render_template('result.html',chickeet=chickeet,positivelist=positivelist)
+        return render_template('result.html',chickeet=chickeet,positivelist=newpositivelist,namelist=namelist)
 
     #おまじない
 if __name__ == "__main__":
