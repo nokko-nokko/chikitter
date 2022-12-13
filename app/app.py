@@ -1,7 +1,12 @@
 import random
 from flask import Flask, render_template, request
 from models.models import PositiveContent
-import MeCab
+# import MeCab
+# GiNZA・spaCyに変更
+import spacy
+nlp = spacy.load('ja_ginza')
+
+nlp = spacy.load('ja_ginza') 
 
 app = Flask(__name__)
 
@@ -36,8 +41,18 @@ def result():
         newpositivelist = []
         noun = ""
         for positive in positivelist:
-            mecab = MeCab.Tagger("-Ochasen")
-            nouns = [line.split()[0] for line in mecab.parse(chickeet).splitlines() if "固有名詞" in line.split()[-1]]
+            # mecab = MeCab.Tagger("-Ochasen")
+            # nouns = [line.split()[0] for line in mecab.parse(chickeet).splitlines() if "固有名詞" in line.split()[-1]]
+
+            # GiNZA・spaCyに変更
+            noun_toks = []
+            nouns = []
+            for tok in nlp(chickeet):
+                if tok.pos_ in ('PROPN'):
+                    noun_toks.append(tok)
+            for tok in noun_toks:
+                nouns.append(tok.text)
+
             if len(nouns) == 0:
                 newpositivelist = ["こんなにすごいと銅像建っちゃうよ","さすが👏","わかりみが深い","めちゃくちゃわかる","それなすぎて草","たしかに🦀"]
             else:
