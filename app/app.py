@@ -6,8 +6,6 @@ from models.models import PositiveContent
 import spacy
 nlp = spacy.load('ja_ginza')
 
-nlp = spacy.load('ja_ginza') 
-
 app = Flask(__name__)
 
 @app.route('/')
