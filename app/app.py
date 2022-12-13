@@ -36,7 +36,7 @@ def result():
         newpositivelist = []
         noun = ""
         for positive in positivelist:
-            mecab = MeCab.Tagger("-d /usr/local/lib/mecab/dic/mecab-ipadic-neologd -Ochasen")
+            mecab = MeCab.Tagger("-Ochasen")
             nouns = [line.split()[0] for line in mecab.parse(chickeet).splitlines() if "固有名詞" in line.split()[-1]]
             if len(nouns) == 0:
                 newpositivelist = ["こんなにすごいと銅像建っちゃうよ","さすが👏","わかりみが深い","めちゃくちゃわかる","それなすぎて草","たしかに🦀"]
