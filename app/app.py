@@ -21,8 +21,9 @@ def result():
     if request.method == "POST":
         # テキストボックスchickeet_contentに書かれた内容をchickeetに代入
         chickeet = request.form["chickeet_content"]
-        # 実際に表示する6つの肯定意見を要素とするリストpositivelistを作成
-        positivelist = []
+        # 実際に表示する6つの肯定意見を要素とするリストpositivelist1（固有名詞なし）、2（あり）を作成
+        positivelist1 = []
+        positivelist2 = []
         # 肯定意見のストックすべてを要素とするリストall_positivelistを作成
         all_positivelist = []
         # データベースをリスト形式にしたリストall_positive_queriesを作成
@@ -30,30 +31,35 @@ def result():
         # all_positive_queriesの各要素（SQLで言う各行）について、行IDなどを排除し、肯定意見の文字列だけを抜き取り、all_positivelistに要素として追加
         for positive_query in all_positive_queries:
             all_positivelist.append(positive_query.body)
-        # all_positivelistの中から要素を6つ重複を許さず選んだリストall_positivelist_randomを作成
-        all_positivelist_random = random.sample(all_positivelist, k=6)
-        # all_positivelist_randomのすべての要素をpositivelistに要素として追加
+        
+        all_positivelist1 = [s for s in all_positivelist if '○○' not in s]
+        all_positivelist2 = [s for s in all_positivelist if '○○' in s]
+
+        all_positivelist_random1 = random.sample(all_positivelist1, k=6)
+        all_positivelist_random2 = random.sample(all_positivelist2, k=6)
         for i in range(6):
-            positivelist.append(all_positivelist_random[i])
+            positivelist1.append(all_positivelist_random1[i])
+            positivelist2.append(all_positivelist_random2[i])
         
         newpositivelist = []
         noun = ""
-        for positive in positivelist:
-            # mecab = MeCab.Tagger("-Ochasen")
-            # nouns = [line.split()[0] for line in mecab.parse(chickeet).splitlines() if "固有名詞" in line.split()[-1]]
+        
+        # mecab = MeCab.Tagger("-Ochasen")
+        # nouns = [line.split()[0] for line in mecab.parse(chickeet).splitlines() if "固有名詞" in line.split()[-1]]
 
-            # GiNZA・spaCyに変更
-            noun_toks = []
-            nouns = []
-            for tok in nlp(chickeet):
-                if tok.pos_ in ('PROPN'):
-                    noun_toks.append(tok)
-            for tok in noun_toks:
-                nouns.append(tok.text)
+        # GiNZA・spaCyに変更
+        noun_toks = []
+        nouns = []
+        for tok in nlp(chickeet):
+            if tok.pos_ in ('PROPN'):
+                noun_toks.append(tok)
+        for tok in noun_toks:
+            nouns.append(tok.text)
 
-            if len(nouns) == 0:
-                newpositivelist = ["こんなにすごいと銅像建っちゃうよ","さすが👏","わかりみが深い","めちゃくちゃわかる","それなすぎて草","たしかに🦀"]
-            else:
+        if len(nouns) == 0:
+                newpositivelist = positivelist1
+        else:
+            for positive in positivelist2:
                 noun = random.choice(nouns)
                 newpositivelist.append(positive.replace('○○',noun))
         
